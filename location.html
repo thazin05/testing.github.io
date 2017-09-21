@@ -1,0 +1,168 @@
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name = "title" content = "Location - Kalaw Hotel, Kalaw, Myanmar">
+	<meta name="description" content="Welcome to Kalaw Hotel, Kalaw, Myanmar. You're in for an unforgetable experience at the stylish Kalaw Hotel, Kalaw, Myanmar with a superb location that puts you in the midst of the city's prized cultural attractions, including the legendary Shwedagon Pagoda and its heritage sites.">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<title>Location - KALAW HOTEL, Kalaw, Myanmar</title>
+
+	<link rel="stylesheet" href="css/fix.css">
+
+	<!--rotater-->
+	 <link rel="stylesheet" href="css/ratator.css"/>
+	<!--rotater-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+		<script>
+
+		$(function(){
+		  $("#header").load("header.html"); 
+		  $("#footer").load("footer.html"); 
+		});
+
+
+		var map;
+		var infowindow;
+
+		function initMap() {
+		  var pyrmont = {lat: 20.617611, lng: 96.562325};
+
+		  
+
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: pyrmont,
+		    zoom: 15
+		  });
+
+		  infowindow = new google.maps.InfoWindow();
+
+		  var service = new google.maps.places.PlacesService(map);
+		  service.nearbySearch({
+		    location: pyrmont,
+		    radius: 500,
+		    types: ['']
+		  }, callback);
+		}
+
+		function callback(results, status) {
+		  if (status === google.maps.places.PlacesServiceStatus.OK) {
+		    for (var i = 0; i < results.length; i++) {
+		      createMarker(results[i]);
+		    }
+		  }
+		}
+
+		function createMarker(place) {
+		  var placeLoc = place.geometry.location;
+		  var marker = new google.maps.Marker({
+		    map: map,
+		    position: place.geometry.location
+		  });
+
+		  google.maps.event.addListener(marker, 'click', function() {
+		    infowindow.setContent(place.name);
+		    infowindow.open(map, this);
+		  });
+		}
+
+
+
+
+		    </script>
+
+
+
+</head>
+<body>
+	<div id="header"></div>
+	<main>
+
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div id="back-link" style="padding-left:27%"><a href="index.html">Stay</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="destination.html">destination</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;Our Location</div>
+							
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top:15px">
+							<h1>Our Location</h1>
+							<p>Conveniently located in Kalaw, Kalaw Heritage Hotel is a great base from which to explore this vibrant city. From here, guests can enjoy easy access to all that the lively city has to offer. For sightseeing options and local attractions, one need not look far as the hotel enjoys close proximity to Palaung Village, Shwe Oo Min Pagoda, Myin Ma Hti Cave. Offering hotel guests superior services and a broad range of amenities, Kalaw Hotel is committed to ensuring that your stay is as comfortable as possible. The hotel provides restaurant, bar, business center, concierge, laundry service to ensure our guests the greatest comfort. Experience high quality room facilities, including mini bar, complimentary bottled water, coffee/tea maker, television, shower, to help you recharge after a long day. The hotel offers many unique recreational opportunities such as garden, tennis courts. Superb facilities and an excellent location make the Kalaw Heritage Hotel the perfect base from which to enjoy your stay in Kalaw.</p>
+						</div>
+						<!--
+                        <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 detailImg" style="padding-top:30px">
+							<br/>
+							<h3>Local Time & Weather</h3>
+							<div class="row jumbotron">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<span>
+									<strong>Date & Time</strong><br/><br/>
+									<strong>Temperature Weather</strong><br/>
+									<strong>Telephone</strong>
+								    </span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<span>
+									04 September 2015 | 12:43 PM<br/>
+									26.1°C / 79°F<br/>
+									Drizzle
+								    </span>
+								</div>
+							</div>
+						</div>
+						-->
+						
+					</div>
+                    <div class="paddingBox"></div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<h3>WHAT'S NEAR BY</h3>
+							<div id="map"></div><br/><br/>
+   							<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap" async defer></script>
+						</div>
+						<div class="col-lg-8 col-md-6 col-sm-4 col-xs-12">
+							<h3>Transportation</h3>
+                            <hr>
+                            <i class="fa fa-plane"></i> <a href="airport-transfer.html">Airport transportation</a>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+							<div class="jumbotron">
+								<table class="table table-hover table-responsive dest_location">
+									<tr>
+										<td>Address</td>
+										<td>3 Quarter, University Road, Kalaw Township, Shan State</td>
+									</tr>
+									<tr>
+										<td>Telephone</td>
+										<td>+95 81 50039, 50192, 50881, 50882</td>
+									</tr>
+									<tr>
+										<td>Fax</td>
+										<td>+95 81 50191</td>
+									</tr>
+									<!--<tr>
+										<td>Email</td>
+										<td></td>
+									</tr> -->
+								</table>
+
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			
+		
+		
+	</main>
+	<div id="footer"></div>
+</body>
+</html>
